@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="autoLayoutLab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="giraffe.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="U9N-7d-LkZ">
+                                <rect key="frame" x="20" y="40" width="335" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="czJ-57-79W"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giraffe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3l0-dS-ftd">
+                                <rect key="frame" x="20" y="448" width="335" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="GHh-Dt-llw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPH-ja-zbM">
+                                <rect key="frame" x="20" y="501" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="I2X-7v-dHO"/>
+                                    <constraint firstAttribute="height" constant="80" id="mzz-lU-il7"/>
+                                </constraints>
+                                <state key="normal" image="giraffeIcon.png"/>
+                                <connections>
+                                    <action selector="handleButton1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NBL-Yd-9WM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHe-Ot-4vb">
+                                <rect key="frame" x="112" y="501" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="msy-3y-L1l"/>
+                                    <constraint firstAttribute="width" constant="80" id="seR-Sd-ZnI"/>
+                                </constraints>
+                                <state key="normal" image="elephantIcon.png"/>
+                                <connections>
+                                    <action selector="handleButton2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qed-4y-Fz2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ew-qT-NpB">
+                                <rect key="frame" x="204" y="501" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="hAN-Rt-9J5"/>
+                                    <constraint firstAttribute="width" constant="80" id="leT-by-gCa"/>
+                                </constraints>
+                                <state key="normal" image="monkeyIcon.png"/>
+                                <connections>
+                                    <action selector="handleButton3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U4A-lB-fEp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.48967800030000003" blue="0.42963728010000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RHe-Ot-4vb" firstAttribute="leading" secondItem="CPH-ja-zbM" secondAttribute="trailing" constant="12" id="8Id-Ca-zbP"/>
+                            <constraint firstItem="RHe-Ot-4vb" firstAttribute="top" secondItem="3l0-dS-ftd" secondAttribute="bottom" constant="8" id="BKS-l6-DZa"/>
+                            <constraint firstItem="U9N-7d-LkZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Fu3-OP-Jcu"/>
+                            <constraint firstItem="5Ew-qT-NpB" firstAttribute="top" secondItem="3l0-dS-ftd" secondAttribute="bottom" constant="8" id="LoA-ru-Vfh"/>
+                            <constraint firstItem="3l0-dS-ftd" firstAttribute="top" secondItem="U9N-7d-LkZ" secondAttribute="bottom" constant="8" id="RC4-rI-MKe"/>
+                            <constraint firstItem="3l0-dS-ftd" firstAttribute="top" secondItem="U9N-7d-LkZ" secondAttribute="bottom" constant="8" id="bi3-R4-m8j"/>
+                            <constraint firstItem="3l0-dS-ftd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="biC-2w-BDe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="U9N-7d-LkZ" secondAttribute="trailing" constant="20" id="eGZ-87-q19"/>
+                            <constraint firstItem="5Ew-qT-NpB" firstAttribute="leading" secondItem="RHe-Ot-4vb" secondAttribute="trailing" constant="12" id="gi6-lF-n9u"/>
+                            <constraint firstItem="U9N-7d-LkZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="q3A-At-oPq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3l0-dS-ftd" secondAttribute="trailing" constant="20" id="sOS-Fg-0lJ"/>
+                            <constraint firstItem="CPH-ja-zbM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="w5S-pa-odw"/>
+                            <constraint firstItem="CPH-ja-zbM" firstAttribute="top" secondItem="3l0-dS-ftd" secondAttribute="bottom" constant="8" id="wob-cp-q9W"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="button1" destination="CPH-ja-zbM" id="tni-m5-o5j"/>
+                        <outlet property="button2" destination="RHe-Ot-4vb" id="RVs-XT-u8o"/>
+                        <outlet property="button3" destination="5Ew-qT-NpB" id="V9Y-IO-C26"/>
+                        <outlet property="coverImageView" destination="U9N-7d-LkZ" id="qWs-sG-kUo"/>
+                        <outlet property="theLabel" destination="3l0-dS-ftd" id="x9u-Kr-FKK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="elephantIcon.png" width="200" height="200"/>
+        <image name="giraffe.jpg" width="333" height="498"/>
+        <image name="giraffeIcon.png" width="200" height="200"/>
+        <image name="monkeyIcon.png" width="200" height="200"/>
+    </resources>
+</document>
