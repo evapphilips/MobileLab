@@ -33,6 +33,9 @@ class ViewController: UIViewController {
         
         // when opened reset the app
         openReset();
+        
+        // check to see if the brightness has been changed
+        NotificationCenter.default.addObserver(self, selector: #selector(percentLabel), name: UIScreen.brightnessDidChangeNotification, object: nil)
     }
     
     
@@ -45,7 +48,7 @@ class ViewController: UIViewController {
         print(numberTries)
         
         // change status label
-        if Int(currentBrightness) == 100 {
+        if Int(currentBrightness) == 44 || Int(currentBrightness) == 100 {
             statusLabel.text = "unlocked";
             percentButton.isHidden = true; // hide the submit button
             resetButton.isHidden = false; // show the reset button
@@ -77,7 +80,17 @@ class ViewController: UIViewController {
         resetButton.isHidden = true;
     }
     
-    
+    // dynamically change the button percentage
+    @objc
+    func percentLabel() {
+        // store the current brightness
+        let brightnessPercent = (UIScreen.main.brightness)*100;
+        let brightnessPercentInt = Int(brightnessPercent);
+        let brightnessPercentStr = String(brightnessPercentInt)
+        percentButton.setTitle(brightnessPercentStr, for: .normal)
+        
+       // print(Int(brightnessPercent))
+    }
 
 
 }
